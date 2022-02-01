@@ -160,12 +160,17 @@ export default function App() {
         <main>
             {tenzies == true && <Confetti />}
             <h1 className="title">Tenzies</h1>
+            
             {tenzies == false ? <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p> : <h2>YOU WON!</h2>}
             {localStorage.getItem("best_rolls") != null && <p className="highscore"><b>Your Highscore:</b> {localStorage.getItem("best_rolls") == null ? "0" : localStorage.getItem("best_rolls")} Rolls in {parseInt(localStorage.getItem("best_time")) == null ? "0" : localStorage.getItem("best_time")} seconds</p>}
+            
             <div className="dice-container">
                 {dieNumber}
+            
             </div>
+            
             <button onClick={Roll} className='button-roll'>{tenzies == false ? "Roll Dice!" : "New Game!"}</button>
+
             {tenzies == true && <p>Rolled: {rolls} times in {timer.elapsed} seconds</p>}
             
         </main>

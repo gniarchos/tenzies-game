@@ -12,7 +12,7 @@ body {
 
 main {
   background-color: #F5F5F5;
-  max-width: 100%;
+  /* max-width: 100%; */
   min-height: 90vh;
   border-radius: 10px;
   padding: 20px;
@@ -37,13 +37,15 @@ main {
 
 .dice-container {
   display: grid;
-  /* grid-template-columns: repeat(5, 1fr); */
-  /* grid-template-rows: repeat(2, 1fr); */
-  grid-template: auto auto / repeat(5, 1fr);
+  /* grid-template: auto auto / repeat(5, 1fr); */
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  max-width: 1200px;
+  margin: 0 auto;
+
+
+
   gap: 10px;
   cursor: pointer;
-  /* width: 100%; */
-  /* margin-left: 50px; */
 
 }
 
@@ -87,4 +89,48 @@ main {
   font-size: 1.2rem;
   margin: 0;
   font-weight: 200;
+}
+
+@media (min-width: 600px) {
+  .dice-container { 
+    grid-template-columns: repeat(5, 1fr); 
+  }
+}
+
+@media (max-width: 910px) {
+  .dice-container { 
+    /* grid-template-columns: repeat(, 1fr);  */
+    gap: 0px;
+  }
+
+  .die-face {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 675px) {
+  .dice-container { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0px;
+    margin-bottom: 25px;
+  }
+
+  .die-face {
+    margin: 10px;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .instructions {
+    font-size: 1.1rem;
+    width: 80vw;
+    margin-top: 5px;
+  }
+  
+  .highscore {
+    font-size: 1rem;
+    margin: 10px;
+  }
 }
