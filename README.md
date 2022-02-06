@@ -14,5 +14,5 @@ This project was made while taking a course about React in Scrimba.com.
 - [x] Comfetti when game ended
 
 
-## :point_right: Project link :point_left:
-[Play here](https://gniarchos.github.io/tenzies-game/)
+## :point_right: Play here
+[Tenzies Game](https://gniarchos.github.io/tenzies-game/)
