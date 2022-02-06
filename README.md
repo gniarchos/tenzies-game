@@ -12,7 +12,3 @@ This project was made while taking a course about React in Scrimba.com.
 - [x] Saves user's highscore <br />
 - [x] Play multiple times <br />
 - [x] Comfetti when game ended
-
-
-## :point_right: Play here
-[Tenzies Game](https://gniarchos.github.io/tenzies-game/)
