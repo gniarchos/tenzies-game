@@ -1,6 +1,6 @@
 # :game_die: Tenzies Game
 
-This project was made while taking a course about React in Scrimba.com.
+This project was made while taking a course in React at Scrimba.com.
 
 ##  :video_game: How to play
 
