@@ -9,9 +9,9 @@ This project was made while taking a course about React in Scrimba.com.
 :black_small_square: Beat your personal highscore
 
 ##  Features
-[x] Saves user's highscore
-[x] Play multiple times
-[x] Comfetti when game ended
+- [x] Saves user's highscore <br />
+- [x] Play multiple times <br />
+- [x] Comfetti when game ended
 
 
 ## Project link
