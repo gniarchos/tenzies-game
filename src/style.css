@@ -91,6 +91,19 @@ main {
   font-weight: 200;
 }
 
+.github-main {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  margin-top: 14px;
+}
+
+.git-img {
+  color: black;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
 @media (min-width: 600px) {
   .dice-container { 
     grid-template-columns: repeat(5, 1fr); 
@@ -133,4 +146,31 @@ main {
     font-size: 1rem;
     margin: 10px;
   }
+}
+
+@media (max-width: 499px) {
+
+  body {
+    padding: 10px;
+  }
+
+  main {
+    padding: 10px;
+    min-height: 83vh;
+  }
+
+  .dice-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .die-face {
+    width: 55px;
+    height: 55px;
+  }
+
+  .github-main {
+    top: 5px;
+    left: 0px;
+  }
+
 }

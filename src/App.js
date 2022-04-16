@@ -1,7 +1,7 @@
 import React from 'react'
 import Die from './components/Die'
 import {nanoid} from 'nanoid'
-import Confetti from 'react-confetti'
+import { Icon } from '@iconify/react'
 
 export default function App() {
 
@@ -32,8 +32,6 @@ export default function App() {
         secs  -= hrs*3600;
         var mnts = Math.floor(secs / 60);
         secs  -= mnts*60;
-        // console.log(days+" days, "+hrs+" Hrs, "+mnts+" Minutes, "+secs+" Seconds");
-        // console.log("Time elapsed: " + mnts + ":" + secs)
         elapsed = `${secs}`
 
         setTimer(oldTimer => {
@@ -42,13 +40,7 @@ export default function App() {
                 end: end,
                 elapsed: elapsed
             }
-        })
-
-        // console.log(timer);
-
-        
-
-        
+        })    
 
     }, [tenzies])
 
@@ -72,7 +64,6 @@ export default function App() {
     }
 
     function holdDice(id) {
-        // console.log(id)
         setDice(prevDice => prevDice.map(die => {
             return die.id === id ? 
             {...die, isHeld: !die.isHeld} : 
@@ -155,13 +146,20 @@ export default function App() {
         }
     }, [dice])
 
+    function gotoGithub() {
+        window.location.href='https://github.com/gniarchos/tenzies-game'
+    }
+
 
     return (
         <main>
-            {tenzies == true && <Confetti />}
+            <div className='github-main'>
+                <Icon onClick={gotoGithub} className='git-img' icon="ant-design:github-filled" width="29" />
+            </div>
+
             <h1 className="title">Tenzies</h1>
             
-            {tenzies == false ? <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p> : <h2>YOU WON!</h2>}
+            {tenzies == false ? <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p> : <h2>Game Ended!</h2>}
             {localStorage.getItem("best_rolls") != null && <p className="highscore"><b>Your Highscore:</b> {localStorage.getItem("best_rolls") == null ? "0" : localStorage.getItem("best_rolls")} Rolls in {parseInt(localStorage.getItem("best_time")) == null ? "0" : localStorage.getItem("best_time")} seconds</p>}
             
             <div className="dice-container">
