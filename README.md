@@ -11,7 +11,4 @@ This project was made while taking a course in React at Scrimba.com.
 ##  :hammer_and_wrench: Features
 - [x] Saves user's highscore <br />
 - [x] Play multiple times <br />
-<<<<<<< HEAD
-=======
 - [x] Comfetti when game ended
->>>>>>> ebd44223ed65ffd1b232592370f160ee37228fee
